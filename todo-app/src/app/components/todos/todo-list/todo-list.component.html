@@ -1,0 +1,31 @@
+<div class="todo-list">
+  <div class="todo-list__header">
+    <div class="todo-list__header-text">Todos</div>
+    <div class="todo-list__header-button"
+         (click)="_onCreateTodoClick()"
+    >
+      <button type="button"
+              class="todo-list__header-button-content"
+      >+
+      </button>
+    </div>
+<div class="todo-list__header-search">
+  <div class="todo-list__header-search-icon">
+    <input type="text"
+           [ngModel]="searchText"
+           (ngModelChange)="_onSearchTextChange($event)"
+           placeholder="Search by Todo Title and Text"
+           class="todo-list__header-search-input"
+    >
+  </div>
+</div>
+  </div>
+  <div class="todo-list__body">
+    <div class="todo-list__body-items" *ngFor="let todoItem of filteredTodoList">
+      <app-todo-card [cardModel]="todoItem"
+                (cardClick)="_onCardClick(todoItem.id)"
+                (deleteTodoEvent)="_deleteTodoEdit($event)"
+      ></app-todo-card>
+    </div>
+  </div>
+</div>

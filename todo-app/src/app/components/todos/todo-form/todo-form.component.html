@@ -1,0 +1,40 @@
+<div class="todo-form__form">
+  <form #todoForm="ngForm">
+    <div class="todo-form__form-text">
+      <div class="text-label"
+           [class._error]="todoTitle.invalid && showErrors"
+      >Title
+      </div>
+      <input type="text" [(ngModel)]="todo.title"
+             name="title"
+             ngModel
+             required
+             #todoTitle="ngModel"
+             [class._error]="todoTitle.invalid && showErrors"
+      >
+      <div *ngIf="todoTitle.invalid && showErrors"
+           class="text-error"
+      >Please add Title
+      </div>
+    </div>
+    <div class="todo-form__form-title">
+
+      <div class="text-label"
+           [class._error]="todoText.invalid && showErrors"
+      >Text
+      </div>
+      <textarea [(ngModel)]="todo.text"
+                placeholder="Write here..."
+                name="text"
+                ngModel
+                required
+                #todoText="ngModel"
+                [class._error]="todoText.invalid && showErrors"
+      ></textarea>
+      <div *ngIf="todoText.invalid && showErrors"
+           class="text-error"
+      >Please add Text
+      </div>
+    </div>
+  </form>
+</div>

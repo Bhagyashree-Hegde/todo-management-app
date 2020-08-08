@@ -1,0 +1,65 @@
+.todo-list {
+
+  &__body {
+    padding-top: 40px;
+  }
+
+  &__header {
+    display: inline-flex;
+    align-items: center;
+
+    &-search {
+      position: relative;
+      display: block;
+      height: 3em;
+      margin-left: 650px;
+      border-bottom: 2px solid silver;
+      min-width: 230px;
+      max-width: 400px;
+
+      &-icon {
+        @height: 20px;
+        height: @height;
+        width: @height;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPHBhdGggZD0iTTE1LjU0NSAxMy40NjY2TDExLjc2NiA5LjY4NzU5QzEyLjMzNiA4Ljc1MjU5IDEyLjY2NCA3LjY1MjU5IDEyLjY2NCA2LjQ3NzU5QzEyLjY2NCAzLjA2MDU5IDkuNzAzIDAuMTAwNTg2IDYuMjg2IDAuMTAwNTg2QzIuODY5IDAuMDk5NTg2MiAwLjA5OTk5ODUgMi44Njk1OSAwLjA5OTk5ODUgNi4yODY1OUMwLjA5OTk5ODUgOS43MDI1OSAzLjA2MSAxMi42NjM2IDYuNDc3IDEyLjY2MzZDNy42MTQgMTIuNjYzNiA4LjY3NyAxMi4zNTQ2IDkuNTkyIDExLjgxOTZMMTMuMzkxIDE1LjYyMDZDMTMuNzYzIDE1Ljk5MTYgMTQuMzY2IDE1Ljk5MTYgMTQuNzM3IDE1LjYyMDZMMTUuNjggMTQuNjc3NkMxNi4wNTEgMTQuMzA2NiAxNS45MTYgMTMuODM3NiAxNS41NDUgMTMuNDY2NlpNMi4wMDQgNi4yODY1OUMyLjAwNCAzLjkyMDU5IDMuOTIxIDIuMDAzNTkgNi4yODYgMi4wMDM1OUM4LjY1MiAyLjAwMzU5IDEwLjc2IDQuMTEwNTkgMTAuNzYgNi40Nzc1OUMxMC43NiA4Ljg0MjU5IDguODQyIDEwLjc2MDYgNi40NzcgMTAuNzYwNkM0LjExMSAxMC43NTk2IDIuMDA0IDguNjUxNTkgMi4wMDQgNi4yODY1OVoiIGZpbGw9IiM4RjlFQjQiLz4NCjwvc3ZnPg0K")
+      }
+
+      &-input {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        margin: 0 0 0 30px;
+        border: none;
+        width: 200px;
+
+        &::placeholder {
+          letter-spacing: 0.5px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+
+
+    &-text {
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    &-button {
+      padding-left: 10px;
+
+      &-content {
+        background: #1976d2;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        border: #1976d2;
+        cursor: pointer;
+      }
+    }
+  }
+}

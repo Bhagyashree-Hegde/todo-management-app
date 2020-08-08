@@ -1,0 +1,40 @@
+.todo-form {
+  &__form {
+    &-title {
+      padding-top: 66px;
+    }
+
+    &-text {
+      padding-top: 20px;
+    }
+  }
+}
+
+.text-error {
+  color: red;
+}
+
+input, textarea {
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+  &._error {
+    border-bottom-color: red;
+  }
+}
+
+.text-label {
+  pointer-events: none;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: silver;
+
+  &._error {
+    color: red;
+  }
+}

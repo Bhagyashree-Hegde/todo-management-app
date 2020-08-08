@@ -1,0 +1,22 @@
+<div class="todo-card"
+     *ngIf="cardModel"
+     (click)="cardClick.emit()"
+>
+  <div class="todo-card__header">
+    <div class="todo-card__header-title">{{cardModel.title}}</div>
+    <div class="todo-card__header-subtitle">{{cardModel.text}}</div>
+  </div>
+  <div class="todo-card__columns">
+    <div class="todo-card__columns-created-date">
+      <div class="todo-card-column-label">Created Date</div>
+      <div class="todo-card-column-value">{{cardModel.createdAt | date: 'short'}}</div>
+    </div>
+    <div class="todo-card__columns-modified-date">
+      <div class="todo-card-column-label">Modified Date</div>
+      <div class="todo-card-column-value">{{cardModel.modifiedAt | date: 'short'}}</div>
+    </div>
+  </div>
+  <div class="todo-card__button" (click)="_onDeleteButtonClick($event)">
+    <div class="todo-card__button-delete"></div>
+  </div>
+</div>

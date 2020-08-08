@@ -1,0 +1,32 @@
+<div class="edit-todo"
+     *ngIf="todo"
+>
+  <div class="edit-todo__header">Edit Todo</div>
+  <div class="edit-todo__form">
+    <app-todo-form #formElement
+                   [todo]="todo"
+                   [showErrors]="showErrors"
+    ></app-todo-form>
+    <div class="edit-todo__form-buttons">
+      <div class="edit-todo__form-buttons-left">
+        <button type="button"
+                class="edit-todo__form-buttons-left-delete"
+                (click)="_deleteTodoEdit()"
+        >Delete
+        </button>
+      </div>
+      <div class="edit-todo__form-buttons-right">
+        <button type="button"
+                class="edit-todo__form-buttons-right-cancel"
+                (click)="_cancelTodoEdit()"
+        >Cancel
+        </button>
+        <button type="button"
+                class="edit-todo__form-buttons-right-edit"
+                (click)="_saveTodo()"
+        >Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

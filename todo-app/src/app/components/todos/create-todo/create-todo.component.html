@@ -1,0 +1,21 @@
+<div class="create-todo">
+  <div class="create-todo__header">Create Todo</div>
+  <div class="create-todo__form">
+    <app-todo-form #formElement
+                   [todo]="todo"
+                   [showErrors]="showErrors"
+    ></app-todo-form>
+    <div class="create-todo__form-buttons">
+      <button type="button"
+              class="create-todo__form-buttons-cancel"
+              (click)="_cancelTodoCreation()"
+      >Cancel
+      </button>
+      <button type="button"
+              class="create-todo__form-buttons-create"
+              (click)="_createTodo()"
+      >Create
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.todo-card {
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid silver;
+  border-radius: 10px;
+  background-color: #F5F6F7;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &__header {
+    width: 55%;
+
+    &-title {
+      font-weight: 500;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &-subtitle {
+      font-size: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    width: 30%;
+    padding-left: 10px;
+
+    &-created-date {
+      width: 50%;
+    }
+
+    &-modified-date {
+      width: 50%;
+    }
+  }
+
+  &__button {
+    padding-left: 100px;
+    cursor: pointer;
+
+    &-delete {
+      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMiAxNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIgMTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOCwxIDgsMCA0LDAgNCwxIDAsMSAwLDMgMTIsMyAxMiwxIAkiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMSwxNWgxMFY0SDFWMTV6IE03LDdoMnY1SDdWN3ogTTMsN2gydjVIM1Y3eiIvPg0KPC9nPg0KPC9zdmc+DQo=");
+      height: 20px;
+      width: 17px;
+    }
+  }
+}
+
+.todo-card-column-label {
+  font-size: 12px;
+  color: silver;
+}
+
+.card-column-value {
+  font-size: 12px;
+}
